@@ -1,163 +1,172 @@
+<!-- 
+	______________            ______ _____       ______________ ______
+___  __ )__  /_____ _________  /____(_)________  __ \_  __ \/__  /
+__  __  |_  /_  __ `/  ___/_  //_/_  /__  ___/  / / /  / / /__  / 
+_  /_/ /_  / / /_/ // /__ _  ,<  _  / _(__  )/ /_/ // /_/ / _  /  
+/_____/ /_/  \__,_/ \___/ /_/|_| /_/  /____/ \____/ \____/  /_/   
+                                                                  
+Name 		 : Sashwat K
+Created on	 : 25 August 2018
+Lasted Edited: 25 August 2018
+Revision	 : 1
+
+Variables used:-
+1.  stu_first_name        : Student's first name 					(Textbox)
+2.  stu_last_name         : Student's last name 					(Textbox)
+3.  stu_country           : Student's Country 						(Textbox)
+4.  stu_gender            : Student's gender 						(Selectbox)
+5.  stu_number            : Student's mobile number 				(Textbox)
+6.  stu_address           : Student's permanent address 			(Textarea)
+7.  stu_pincode           : Student's pincode 						(Textbox)
+8.  guard_first_name      : Guardian's first nae 					(Textbox)
+9.  guard_last_name       : Guardian's last name 					(Textbox)
+10. guard_relationship    : Guardian's relationship to the student  (Selectbox)
+11. guard_gender          : Guardian's gender 						(Selectbox)
+12. guard_address         : Guardian's address 						(Textarea)
+13. guard_pincode         : Guardian's pincode 						(Textbox)
+14. stu_syllabus	      : Student's syllabus 						(Selectbox)
+15. stu_school            : Student's school 						(Textbox)
+16. stu_stream		   	  : Student's stream 						(Selectbox)
+17. stu_school_percentage : Student's percentage 					(Textbox)
+18. terms                 : Terms and conditions 					(Checkbox)
+-->
+
 <html>
 <head>
 	<title>Registration Form</title>
 </head>
-<body bgcolor="green">
+<body bgcolor="grey">
 	<center>
-		<h1>Report Card</h1>
-		<h2>Personal Details</h2>
-		<form action="" method="POST">
-			<table>
-				<tr>
-					<td>Name:</td>
-					<td><input type="text" name="stuname"></td>
-				</tr>
-				<tr>
-					<td>DOB:</td>
-					<td><input type="date" name="stuclass" placeholder="MCA" disabled="true"></td>
-				</tr>
-				<tr>
-					<td>Phone number:</td>
-					<td>
-						<select disabled="true">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td>Address:</td>
-					<td><textarea></textarea></td>
-				</tr>
-			</table>
-		</form>
+		<h1>Course Registration</h1>
+		<h2>Enter the following details</h2>
 	</center>
-	<div style="width: 50%; float: left;">
+	<div style="width: 50%; height: 30%; float: left;">
 		<fieldset>
-			<legend>Attendence Report</legend>
+			<legend>Personal Details</legend>
 			<form action="" method="POST">
 				<table>
 					<tr>
-						<td>Sujects</td>
-						<td>Attendence Percentage</td>
+						<td>First Name: </td>
+						<td><input type="text" name="stu_first_name"></td>
 					</tr>
 					<tr>
-						<td>
-						<select>
-							<option>C</option>
-							<option>C++</option>
-							<option>Java</option>
-							<option>Python</option>
-						</select>
-					</td>
-						<td><input type="text" name="addent1" placeholder="Attendence 1"></td>
+						<td>Last Name: </td>
+						<td><input type="text" name="stu_last_name"></td>
 					</tr>
 					<tr>
+						<td>Nationality: </td>
+						<td><input type="text" name="stu_country"></td>
+					</tr>
+					<tr>
+						<td>Gender: </td>
 						<td>
-							<select>
-								<option>C</option>
-								<option>C++</option>
-								<option>Java</option>
-								<option>Python</option>
+							<select name="stu_gender">
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
 							</select>
 						</td>
-						<td><input type="text" name="addent2" placeholder="Attendence 2"></td>
 					</tr>
 					<tr>
-						<td>
-							<select>
-								<option>C</option>
-								<option>C++</option>
-								<option>Java</option>
-								<option>Python</option>
-							</select>
-						</td>
-						<td><input type="text" name="addent3" placeholder="Attendence 3"></td>
+						<td>Mobile number: </td>
+						<td><input type="number" name="guard_number"></td>
 					</tr>
 					<tr>
-						<td>
-							<select>
-								<option>C</option>
-								<option>C++</option>
-								<option>Java</option>
-								<option>Python</option>
-							</select>
-						</td>
-						<td><input type="text" name="addent4" placeholder="Attendence 4"></td>
+						<td>Address: </td>
+						<td><textarea name="guard_address"></textarea></td>
+					</tr>
+					<tr>
+						<td>Pincode: </td>
+						<td><input type="number" name="guard_pincode"></td>
 					</tr>
 				</table>
 			</form>
 		</fieldset>
 	</div>
-		<div style="width: 50%; float: left;">
+		<div style="width: 50%;float: left;">
 		<fieldset>
-			<legend>Academic Report</legend>
+			<legend>Guardian's Details</legend>
 			<form action="" method="POST">
 				<table>
 					<tr>
-						<td></td>
-						<td>Quarter 1</td>
-						<td>Quarter 2</td>
-						<td>Quarter 3</td>
-						<td>Quarter 4</td>
+						<td>Guardian's First Name: </td>
+						<td><input type="text" name="guard_first_name"></td>
 					</tr>
 					<tr>
-						<td>
-							<select>
-								<option>C</option>
-								<option>C++</option>
-								<option>Java</option>
-								<option>Python</option>
-							</select>
-						</td>
-						<td><input type="text" name="m1_2" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_2" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_3" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_4" placeholder="Mark 1" style="width: 100%"></td>
+						<td>Guardian's Last Name: </td>
+						<td><input type="text" name="guard_last_name"></td>
 					</tr>
 					<tr>
+						<td>Guardian's Relationship: </td>
 						<td>
-							<select>
-								<option>C</option>
-								<option>C++</option>
-								<option>Java</option>
-								<option>Python</option>
+							<select name="guard_relationship">
+								<option value="Father">Father</option>
+								<option value="Mother">Mother</option>
+								<option value="Relative">Relative</option>
 							</select>
 						</td>
-						<td><input type="text" name="m1_1" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_2" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_3" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_4" placeholder="Mark 1" style="width: 100%"></td>
 					</tr>
 					<tr>
+						<td>Guardian's Gender: </td>
 						<td>
-							<select>
-								<option>C</option>
-								<option>C++</option>
-								<option>Java</option>
-								<option>Python</option>
+							<select name="guard_gender">
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
 							</select>
 						</td>
-						<td><input type="text" name="m1_1" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_2" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_3" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_4" placeholder="Mark 1" style="width: 100%"></td>
 					</tr>
 					<tr>
+						<td>Guardian's Mobile number: </td>
+						<td><input type="number" name="guard_number"></td>
+					</tr>
+					<tr>
+						<td> Guardian'sAddress: </td>
+						<td><textarea name="guard_address"></textarea></td>
+					</tr>
+					<tr>
+						<td> Guardian's Pincode: </td>
+						<td><input type="number" name="guard_pincode"></td>
+					</tr>
+				</table>
+			</form>
+		</fieldset>
+	</div>
+	<div>
+		<fieldset>
+			<legend>Academic Details</legend>
+			<form action="" method="POST">
+				<table>
+					<tr>
+						<td>School</td>
+					</tr>
+					<tr>
+						<td>Syllabus:</td>
 						<td>
-							<select>
-								<option>C</option>
-								<option>C++</option>
-								<option>Java</option>
-								<option>Python</option>
+							<select name="stu_syllabus">
+								<option value="CBSE">CBSE</option>
+								<option value="ICSE">ICSE</option>
+								<option value="STATE">STATE</option>
+								<option value="International">International</option>
 							</select>
 						</td>
-						<td><input type="text" name="m1_1" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_2" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_3" placeholder="Mark 1" style="width: 100%"></td>
-						<td><input type="text" name="m1_4" placeholder="Mark 1" style="width: 100%"></td>
+					</tr>
+					<tr>
+						<td>School Name:</td>
+						<td><input type="text" name="stu_school"></td>
+					</tr>
+					<tr>
+						<td>Stream:</td>
+						<td>
+							<select name="stu_stream">
+								<option value="CS">Science with CS</option>
+								<option value="Bio">Science with Biology</option>
+								<option value="Commerce">Commerce</option>
+								<option value="Hummanities">Hummanities</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>stu_school_percentage</td>
+						<td><input type="number" name="stu_school_percentage"></td>
 					</tr>
 				</table>
 			</form>
@@ -169,10 +178,16 @@
 			<p>The above details are true.</p>
 			<table>
 				<tr>
-					<td><input type="checkbox" name="c"></td>
+					<td><input type="checkbox" name="terms" value="1"></td>
 					<td>Terms and conditions</td>
 				</tr>
 			</table>
 		</fieldset>
 	</div>
+	<dir>
+		<center>
+			<button name="submit">Submit</button>
+			<button name="reset">Reset</button>
+		</center>
+	</dir>
 </body>
