@@ -1,3 +1,25 @@
+<!-- 
+	______________            ______ _____       ______________ ______
+___  __ )__  /_____ _________  /____(_)________  __ \_  __ \/__  /
+__  __  |_  /_  __ `/  ___/_  //_/_  /__  ___/  / / /  / / /__  / 
+_  /_/ /_  / / /_/ // /__ _  ,<  _  / _(__  )/ /_/ // /_/ / _  /  
+/_____/ /_/  \__,_/ \___/ /_/|_| /_/  /____/ \____/ \____/  /_/   
+                                                                  
+Name 		 : Sashwat K
+Created on	 : 25 August 2018
+Lasted Edited: 25 August 2018
+Revision	 : 1
+
+Variables used:-
+1. cust_name	: Customer's name 			(textbox)
+2. cust_email	: Customer's E-Mail			(textbox)
+3. cust_gender	: Customer's gender 		(Select box)
+4. cust_acc		: Customer's account type 	(Radio button)
+5. cust_inc		: Customer's Income 		(checkbox)
+6. cust_pass	: Customer's Password 		(password)
+7. cust_submit	: submit 					(Submit)
+-->
+
 <!DOCTYPE html>
   <head>
     <title>
@@ -50,31 +72,40 @@
         <table>
           <tr>
             <td>Name</td>
-            <td><input type="text"></td>
+            <td><input type="text" name="cust_name"></td>
           </tr>
           <tr>
             <td>E-Mail</td>
-            <td><input type="text"></td>
+            <td><input type="text" name="cust_email"></td>
           </tr>
           <tr>
             <td>Gender</td>
-            <td><select> <option> Female</option> <option>Male</option></td>
+            <td>
+            	<select name="cust_gender"> 
+            		<option value="Female">Female</option> 
+            		<option value="Male">Male</option></td>
           </tr>
           <tr>
-            <td>Account</td>
-            <td><input type="radio"> Zero balance <input type="radio"> Saving account</td>
+             <td>Account</td>
+             <td>
+            	<input type="radio" name="cust_acc" value="zero balance"> Zero balance
+            	<input type="radio" name="cust_acc" value="Saving account"> Saving account
+             </td>
           </tr>
           <tr>
              <td>Income</td>
-             <td><input type="checkbox"> 50,000 <input type="checkbox"> 100,000</td>
+             <td>
+             	<input type="checkbox" name="cust_inc" value="50000"> 50,000 
+             	<input type="checkbox" name="cust_inc" value="100000"> 100,000
+             </td>
           </tr>
           <tr>
             <td>Password</td>
-            <td><input type="Password"></td>
+            <td><input type="Password" name="cust_pass"></td>
           </tr>
           <tr>
             <td></td>
-            <td><input type="submit"></td>
+            <td><input type="submit" name="cust_submit"></td>
           </tr>
         </table>
       </form>
