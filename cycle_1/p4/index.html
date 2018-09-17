@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>p4: Javascript validation</title>
+	<script type="text/javascript">
+		function myform_validation() {
+			var first_namee = document.forms["sash_form"]["first_name"].value;
+			var middle_namee = document.forms["sash_form"]["middle_name"].value;
+			var last_namee = document.forms["sash_form"]["last_name"].value;
+			var genderr = document.forms["sash_form"]["gender"].value;
+			var mother_namee = document.forms["sash_form"]["mother_name"].value;
+			var father_namee = document.forms["sash_form"]["father_name"].value;
+			var permanent_addresss = document.forms["sash_form"]["permanent_address"].value;
+			var cityy = document.forms["sash_form"]["city"].value;
+			var statee = document.forms["sash_form"]["state"].value;
+			var pincodee = document.forms["sash_form"]["pincode"].value;
+			var countryy = document.forms["sash_form"]["country"].value;
+			var emaill = document.forms["sash_form"]["email"].value;
+
+			if (first_namee = " ") {
+				alert("First name required")
+			}
+			if (middle_namee = " ") {
+				alert("Middle name required")
+			}
+			if (last_namee = " ") {
+				alert("last_name required")
+			}
+			if (genderr = " ") {
+				alert("gender required")
+			}
+			if (mother_namee = " ") {
+				alert("mother_name required")
+			}
+			if (father_namee = " ") {
+				alert("mother_name required")
+			}
+			if (permanent_addresss = " ") {
+				alert("permanent_addresss required")
+			}
+			
+			/*alert(first_namee);
+			alert(middle_namee);
+			alert(last_namee);
+			alert(genderr);
+			alert(mother_namee);
+			alert(father_namee);
+			alert(permanent_addresss);
+			alert(cityy);
+			alert(statee);
+			alert(pincodee);
+			alert(countryy);
+			alert(emaill);*/
+		}
+	</script>
+</head>
+<body>
+	<form name="sash_form" onsubmit="myform_validation()">
+		<table>
+			<tr>
+				<td>First name</td>
+				<td><input type="text" name="first_name"></td>
+			</tr>
+			<tr>
+				<td>Middle name</td>
+				<td><input type="text" name="middle_name"></td>
+			</tr>
+			<tr>
+				<td>Last name</td>
+				<td><input type="text" name="last_name"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gender" value="male"> Male<br></td>
+				<td><input type="radio" name="gender" value="female"> Female<br></td>
+			</tr>
+			<tr>
+				<td>Mother's name</td>
+				<td><input type="text" name="mother_name"></td>
+			</tr>
+			<tr>
+				<td>Father's name</td>
+				<td><input type="text" name="father_name"></td>
+			</tr>
+			<tr>
+				<td>Permanent Address</td>
+				<td><textarea name="permanent_address"></textarea></td>
+			</tr>
+			<tr>
+				<td>City</td>
+				<td>
+					<select name="city">
+						<option value=" "><---City---></option>
+						<option value="Thiruvananthapuram">Thiruvananthapuram</option>
+						<option value="Kochi">Kochi</option>
+						<option value="Calicut">Calicut</option>
+						<option value="Kollam">Kollam</option>
+						<option value="Thrissur">Thrissur</option>
+						<option value="Alappuzha">Alappuzha</option>
+						<option value="Kottayam">Kottayam</option>
+						<option value="Palakkad">Palakkad</option>
+						<option value="Changanassery">Changanassery</option>
+						<option value="Sulthan Bathery">Sulthan Bathery</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>State</td>
+				<td>
+					<select name="state">
+						<option value=" "><---State---></option>
+						<option value="Kerala">Kerala</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Pincode</td>
+				<td><input type="number" name="pincode"></td>
+			</tr>
+			<tr>
+				<td>Country</td>
+				<td>
+					<select name="county">
+						<option value=" "><---Country---></option>
+						<option value="Kerala">India</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>E-Mail</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit"></td>
+			</tr>
+		</table>
+	</form>	
+</body>
+</html>
