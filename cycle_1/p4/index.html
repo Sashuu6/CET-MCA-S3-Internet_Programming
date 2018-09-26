@@ -1,141 +1,276 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-	<title>p4: Javascript validation</title>
-	<script type="text/javascript">
-		function myform_validation() {
-			var first_namee = document.forms["sash_form"]["first_name"].value;
-			var middle_namee = document.forms["sash_form"]["middle_name"].value;
-			var last_namee = document.forms["sash_form"]["last_name"].value;
-			var genderr = document.forms["sash_form"]["gender"].value;
-			var mother_namee = document.forms["sash_form"]["mother_name"].value;
-			var father_namee = document.forms["sash_form"]["father_name"].value;
-			var permanent_addresss = document.forms["sash_form"]["permanent_address"].value;
-			var cityy = document.forms["sash_form"]["city"].value;
-			var statee = document.forms["sash_form"]["state"].value;
-			var pincodee = document.forms["sash_form"]["pincode"].value;
-			var countryy = document.forms["sash_form"]["country"].value;
-			var emaill = document.forms["sash_form"]["email"].value;
+<!-- 
+	 	 ________  ________  ________  ___  ___  ___  ___  ___  ___  ________     
+		|\   ____\|\   __  \|\   ____\|\  \|\  \|\  \|\  \|\  \|\  \|\   ____\    
+		\ \  \___|\ \  \|\  \ \  \___|\ \  \\\  \ \  \\\  \ \  \\\  \ \  \___|    
+		 \ \_____  \ \   __  \ \_____  \ \   __  \ \  \\\  \ \  \\\  \ \  \____   
+		  \|____|\  \ \  \ \  \|____|\  \ \  \ \  \ \  \\\  \ \  \\\  \ \  ___  \ 
+		    ____\_\  \ \__\ \__\____\_\  \ \__\ \__\ \_______\ \_______\ \_______\
+		   |\_________\|__|\|__|\_________\|__|\|__|\|_______|\|_______|\|_______|
+		   \|_________|        \|_________|                                       
 
-			if (first_namee = " ") {
-				alert("First name required")
-			}
-			if (middle_namee = " ") {
-				alert("Middle name required")
-			}
-			if (last_namee = " ") {
-				alert("last_name required")
-			}
-			if (genderr = " ") {
-				alert("gender required")
-			}
-			if (mother_namee = " ") {
-				alert("mother_name required")
-			}
-			if (father_namee = " ") {
-				alert("mother_name required")
-			}
-			if (permanent_addresss = " ") {
-				alert("permanent_addresss required")
-			}
+	Name : Sashwat K                  
+ -->
+<html>
+	<head>
+		<style>
 			
-			/*alert(first_namee);
-			alert(middle_namee);
-			alert(last_namee);
-			alert(genderr);
-			alert(mother_namee);
-			alert(father_namee);
-			alert(permanent_addresss);
-			alert(cityy);
-			alert(statee);
-			alert(pincodee);
-			alert(countryy);
-			alert(emaill);*/
+			#body{
+				margin: -10px;
+	    		margin-left: -10px;
+				width: 82%;
+				margin-left: 9%;
+				box-shadow: 1px -1px 11px -1px black;
+			}
+			#nav1{
+				background: #ced6f0;
+				height:50px;
+			}
+			#nav2{
+				height:50px;
+			}
+			#logo{
+				width: 60px;
+			}
+			td.logo{
+				width: 55%;
+			}
+			#td{
+				background: #b3cef5;
+			}
+			h4.title{
+				float: left;
+				margin-top: 13;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 22px;
+				color: #793abd;
+			}
+			#logo{
+				float:left;
+			}
+			.nav-menu{
+	    		margin-left: -27px;
+			}
+			li.nav-menu{
+				float: left;
+				margin-left: 11px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			li.nav-menu1{
+	    		float: left;
+	    		margin-left: 23px;
+	    		font-family: Arial, Helvetica, sans-serif;
+			}
+			td.nav2 {
+	    		border-top: 1px solid #999;
+	    	}
+		</style>
+	</head>
+	<body>
+		<table id="body" >
+			<tr id="nav2">
+				<td rowspan="2" class="logo">
+					<img src="assets/images/logo.png" id="logo"/>
+					<h4 class="title"> The institute of Technical education of India</h4>
+					</td>
+				<td>
+					Search <input type="text"/>
+				</td>
+			</tr>
+			<tr id="nav2" ><td class="nav2">
+				<ul class="nav-menu" type="none">
+					<li class="nav-menu">Home</li>	
+					<li class="nav-menu">e-Service</li>	
+					<li class="nav-menu">e-sahaya</li>	
+					<li class="nav-menu">feedback</li>	
+					<li class="nav-menu">contact us</li>	
+					<li class="nav-menu">Web mail</li>	
+				</ul>
+				</td>
+			</tr>
+			<tr id="nav1">
+				<td colspan="2">
+					<ul class="nav-menu1" type="none">
+						<li class="nav-menu1">Overview</li>	
+						<li class="nav-menu1">Department</li>	
+						<li class="nav-menu1">Members</li>	
+						<li class="nav-menu1">Students</li>	
+						<li class="nav-menu1">Industry</li>	
+						<li class="nav-menu1">Resources</li>	
+						<li class="nav-menu1">Showcases</li>	
+						<li class="nav-menu1">Others</li>	
+						<li class="nav-menu1">FAQs</li>		
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<form onsubmit="return f()" name="sashForm">
+						<table width="100%" class="form">
+							<caption>
+								<h3>Application Form for Registration to Common Proficiency Test Course</h3>
+							</caption>
+							<tr id="td">
+								<td colspan="2">1.Name in full</td>
+							</tr>
+							<tr id="td">
+								<td id="td">First Name</td>
+								<td><input type="text" name="fname" placeholder=" First Name" required/></td>
+							</tr>
+							<tr id="td">
+								<td id="td">Midle Name</td>
+								<td><input type="text" name="mname"  required/></td>
+							</tr>
+							<tr id="td">
+								<td id="td">Last Name</td>
+								<td><input type="text" name="lname"  required/></td>
+							</tr>
+							<tr id="td">
+								<td id="td">2.Sex</td><td><input type="radio" name="sex" required/>Male<input type="radio" name="sex" required/>Female</td>
+							</tr>
+							<tr id="td">
+								<td id="td">3.Date of Birth</td>
+								<td ><input type="date" name="dob" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">4.(a)Mothers Name</td>
+								<td><input type="text" name="mothern" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">4.(b)Fathers Name</td>
+								<td><input type="text" name="fathern" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td" colspan="2">5.(a)Address for communication</td>
+							</tr>
+							<tr id="td">
+								<td id="td">Address Line 1</td>
+								<td><input type="text" name="address1" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Address Line 2</td>
+								<td><input type="text" name="address2" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Address Line 3</td>
+								<td><input type="text" name="address3"/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Address Line 4</td>
+								<td><input type="text" name="address4"/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td" >City</td>
+								<td><input type="text" name="city" required/>State code <input type="text" name="statecode" required/></td></tr>	
+							<tr id="td">
+								<td id="td">Pin</td>
+								<td><input type="text" name="pin" required/>Phone No with std code <input type="text" name="phno" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Country</td>
+								<td>
+									<select name="country" required>
+										<option><---Select Country---></option>
+										<option>INDIA</option>
+										<option></option>
+									</select>
+								</td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Email id</td>
+								<td><input type="text" name="email" required/>Mobile No <input type="text" name="mobileno" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td" colspan="2">5(b)Permenant Address same as communication address 5(a)above<input type="radio" name="same" onchange="abc(this.value)" value="yes"/>Yes<input value="no" onchange="abc(this.value)"		type="radio" name="same" />No</td>
+							</tr>
+							<tr id="td">
+								<td id="td">Address Line 1</td>
+								<td><input type="text" name="paddress1" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Address Line 2</td>
+								<td><input type="text" name="paddress2" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Address Line 3</td>
+								<td><input type="text" name="paddress3" /></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Address Line 4</td>
+								<td><input type="text" name="paddress4"/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">City</td>
+								<td><input type="text" name="pcity" required/> State code <input type="text" name="pstatecode" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Pin</td>
+								<td><input type="text" name="ppin" required/>Phone No with std code <input type="text" name="pphno" required/></td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Country</td>
+								<td>
+									<select name="pcountry" required>
+										<option>---Select Country---</option>
+										<option>INDIA</option>
+										<option></option>
+									</select>
+								</td>
+							</tr>	
+							<tr id="td">
+								<td id="td">Email id</td>
+								<td><input type="text" name="pemail" required/>Mobile No <input type="text" name="pmobileno" required/></td>
+							</tr>
+							<tr id="td">
+								<td id="td" colspan="2"><input type="submit"/></td>
+							</tr>	
+						</table>
+					</form>
+				</td>
+			</tr>
+		</table>	
+	</body>
+	<script>
+		function f(){
+			if(document.forms["sashForm"]["fname"].value=="a")
+			{	
+				alert("gfhf");
+				return false;
+			}
+			else
+			{
+			return true;
+			}	
+		}
+		function abc(str)
+		{
+			if(document.forms["sashForm"]["same"].value=="yes")
+			{	
+				document.forms["sashForm"]["paddress1"].value=document.forms["sashForm"]["address1"].value;
+				document.forms["sashForm"]["paddress2"].value=document.forms["sashForm"]["address2"].value;
+				document.forms["sashForm"]["paddress3"].value=document.forms["sashForm"]["address3"].value;
+				document.forms["sashForm"]["paddress4"].value=document.forms["sashForm"]["address4"].value;
+				document.forms["sashForm"]["pcity"].value=document.forms["sashForm"]["city"].value;
+				document.forms["sashForm"]["ppin"].value=document.forms["sashForm"]["pin"].value;
+				document.forms["sashForm"]["pcountry"].value=document.forms["sashForm"]["country"].value;
+				document.forms["sashForm"]["pemail"].value=document.forms["sashForm"]["email"].value;
+				document.forms["sashForm"]["pstatecode"].value=document.forms["sashForm"]["statecode"].value;
+				document.forms["sashForm"]["pphno"].value=document.forms["sashForm"]["phno"].value;
+				document.forms["sashForm"]["pmobileno"].value=document.forms["sashForm"]["mobileno"].value;
+			}
+			else
+			{
+				document.forms["sashForm"]["paddress1"].value="";
+				document.forms["sashForm"]["paddress2"].value="";
+				document.forms["sashForm"]["paddress3"].value="";
+				document.forms["sashForm"]["paddress4"].value="";
+				document.forms["sashForm"]["pcity"].value="";
+				document.forms["sashForm"]["ppin"].value=""
+				document.forms["sashForm"]["pcountry"].value="";
+				document.forms["sashForm"]["pemail"].value="";
+				document.forms["sashForm"]["pstatecode"].value="";
+				document.forms["sashForm"]["pphno"].value="";
+				document.forms["sashForm"]["pmobileno"].value="";
+			}
 		}
 	</script>
-</head>
-<body>
-	<form name="sash_form" onsubmit="myform_validation()">
-		<table>
-			<tr>
-				<td>First name</td>
-				<td><input type="text" name="first_name"></td>
-			</tr>
-			<tr>
-				<td>Middle name</td>
-				<td><input type="text" name="middle_name"></td>
-			</tr>
-			<tr>
-				<td>Last name</td>
-				<td><input type="text" name="last_name"></td>
-			</tr>
-			<tr>
-				<td>Gender</td>
-				<td><input type="radio" name="gender" value="male"> Male<br></td>
-				<td><input type="radio" name="gender" value="female"> Female<br></td>
-			</tr>
-			<tr>
-				<td>Mother's name</td>
-				<td><input type="text" name="mother_name"></td>
-			</tr>
-			<tr>
-				<td>Father's name</td>
-				<td><input type="text" name="father_name"></td>
-			</tr>
-			<tr>
-				<td>Permanent Address</td>
-				<td><textarea name="permanent_address"></textarea></td>
-			</tr>
-			<tr>
-				<td>City</td>
-				<td>
-					<select name="city">
-						<option value=" "><---City---></option>
-						<option value="Thiruvananthapuram">Thiruvananthapuram</option>
-						<option value="Kochi">Kochi</option>
-						<option value="Calicut">Calicut</option>
-						<option value="Kollam">Kollam</option>
-						<option value="Thrissur">Thrissur</option>
-						<option value="Alappuzha">Alappuzha</option>
-						<option value="Kottayam">Kottayam</option>
-						<option value="Palakkad">Palakkad</option>
-						<option value="Changanassery">Changanassery</option>
-						<option value="Sulthan Bathery">Sulthan Bathery</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>State</td>
-				<td>
-					<select name="state">
-						<option value=" "><---State---></option>
-						<option value="Kerala">Kerala</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Pincode</td>
-				<td><input type="number" name="pincode"></td>
-			</tr>
-			<tr>
-				<td>Country</td>
-				<td>
-					<select name="country">
-						<option value=" "><---Country---></option>
-						<option value="Kerala">India</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>E-Mail</td>
-				<td><input type="text" name="email"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" name="submit"></td>
-			</tr>
-		</table>
-	</form>	
-</body>
 </html>
