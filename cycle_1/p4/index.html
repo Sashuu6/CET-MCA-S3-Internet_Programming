@@ -12,6 +12,7 @@
  -->
 <html>
 	<head>
+		<meta charset="utf-8">
 		<style>
 			
 			#body{
@@ -114,103 +115,103 @@
 							</tr>
 							<tr id="td">
 								<td id="td">First Name</td>
-								<td><input type="text" name="fname" placeholder=" First Name" required/></td>
+								<td><input type="text" name="first_name" placeholder=" First Name" required/></td>
 							</tr>
 							<tr id="td">
 								<td id="td">Midle Name</td>
-								<td><input type="text" name="mname"  required/></td>
+								<td><input type="text" name="middle_name"  required/></td>
 							</tr>
 							<tr id="td">
 								<td id="td">Last Name</td>
-								<td><input type="text" name="lname"  required/></td>
+								<td><input type="text" name="last_name"  required/></td>
 							</tr>
 							<tr id="td">
-								<td id="td">2.Sex</td><td><input type="radio" name="sex" required/>Male<input type="radio" name="sex" required/>Female</td>
+								<td id="td">2.gender</td><td><input type="radio" name="gender" required/>Male<input type="radio" name="gender" required/>Female</td>
 							</tr>
 							<tr id="td">
 								<td id="td">3.Date of Birth</td>
-								<td ><input type="date" name="dob" required/></td>
+								<td ><input type="date" name="date_of_birth" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">4.(a)Mothers Name</td>
-								<td><input type="text" name="mothern" required/></td>
+								<td><input type="text" name="mother_name" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">4.(b)Fathers Name</td>
-								<td><input type="text" name="fathern" required/></td>
+								<td><input type="text" name="father_name" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td" colspan="2">5.(a)Address for communication</td>
 							</tr>
 							<tr id="td">
 								<td id="td">Address Line 1</td>
-								<td><input type="text" name="address1" required/></td>
+								<td><input type="text" name="communication_address_1" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 2</td>
-								<td><input type="text" name="address2" required/></td>
+								<td><input type="text" name="communication_address_2" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 3</td>
-								<td><input type="text" name="address3"/></td>
+								<td><input type="text" name="communication_address_3"/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 4</td>
-								<td><input type="text" name="address4"/></td>
+								<td><input type="text" name="communication_address_4"/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td" >City</td>
-								<td><input type="text" name="city" required/>State code <input type="text" name="statecode" required/></td></tr>	
+								<td><input type="text" name="city" required/>State code <input type="text" name="communication_address_state_code" required/></td></tr>	
 							<tr id="td">
-								<td id="td">Pin</td>
-								<td><input type="text" name="pin" required/>Phone No with std code <input type="text" name="phno" required/></td>
+								<td id="td">PIN</td>
+								<td><input type="text" name="communication_address_pin" required/>Phone No with std code <input type="text" name="communication_address_phone_number" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Country</td>
 								<td>
-									<select name="country" required>
-										<option><---Select Country---></option>
+									<select name="communication_address_country" required>
+										<option><---Select country---></option>
 										<option>INDIA</option>
 										<option></option>
 									</select>
 								</td>
 							</tr>	
 							<tr id="td">
-								<td id="td">Email id</td>
-								<td><input type="text" name="email" required/>Mobile No <input type="text" name="mobileno" required/></td>
+								<td id="td">Email ID</td>
+								<td><input type="text" name="communication_address_email" required/>Mobile No <input type="text" name="communication_address_mobileno" required/></td>
 							</tr>	
 							<tr id="td">
-								<td id="td" colspan="2">5(b)Permenant Address same as communication address 5(a)above<input type="radio" name="same" onchange="abc(this.value)" value="yes"/>Yes<input value="no" onchange="abc(this.value)"		type="radio" name="same" />No</td>
+								<td id="td" colspan="2">5(b)Permenant Address same as communication address 5(a)above<input type="radio" name="same" onchange="address_copy(this.value)" value="yes"/>Yes<input value="no" onchange="address_copy(this.value)" type="radio" name="same" />No</td>
 							</tr>
 							<tr id="td">
 								<td id="td">Address Line 1</td>
-								<td><input type="text" name="paddress1" required/></td>
+								<td><input type="text" name="permanent_communication_address_1" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 2</td>
-								<td><input type="text" name="paddress2" required/></td>
+								<td><input type="text" name="permanent_communication_address_2" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 3</td>
-								<td><input type="text" name="paddress3" /></td>
+								<td><input type="text" name="permanent_communication_address_3" /></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 4</td>
-								<td><input type="text" name="paddress4"/></td>
+								<td><input type="text" name="permanent_communication_address_4"/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">City</td>
-								<td><input type="text" name="pcity" required/> State code <input type="text" name="pstatecode" required/></td>
+								<td><input type="text" name="permanent_city" required/> State code <input type="text" name="permanent_communication_address_state_code" required/></td>
 							</tr>	
 							<tr id="td">
-								<td id="td">Pin</td>
-								<td><input type="text" name="ppin" required/>Phone No with std code <input type="text" name="pphno" required/></td>
+								<td id="td">PIN</td>
+								<td><input type="text" name="permanent_communication_address_pin" required/>Phone No with std code <input type="text" name="permanent_communication_address_phone_number" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Country</td>
 								<td>
-									<select name="pcountry" required>
-										<option>---Select Country---</option>
+									<select name="permanent_communication_address_country" required>
+										<option>---Select country---</option>
 										<option>INDIA</option>
 										<option></option>
 									</select>
@@ -218,7 +219,7 @@
 							</tr>	
 							<tr id="td">
 								<td id="td">Email id</td>
-								<td><input type="text" name="pemail" required/>Mobile No <input type="text" name="pmobileno" required/></td>
+								<td><input type="text" name="permanent_address_email" required/>Mobile No <input type="text" name="permanent_address_mobileno" required/></td>
 							</tr>
 							<tr id="td">
 								<td id="td" colspan="2"><input type="submit"/></td>
@@ -230,46 +231,36 @@
 		</table>	
 	</body>
 	<script>
-		function f(){
-			if(document.forms["sashForm"]["fname"].value=="a")
-			{	
-				alert("gfhf");
-				return false;
-			}
-			else
-			{
-			return true;
-			}	
-		}
-		function abc(str)
+
+		function address_copy(str)
 		{
 			if(document.forms["sashForm"]["same"].value=="yes")
 			{	
-				document.forms["sashForm"]["paddress1"].value=document.forms["sashForm"]["address1"].value;
-				document.forms["sashForm"]["paddress2"].value=document.forms["sashForm"]["address2"].value;
-				document.forms["sashForm"]["paddress3"].value=document.forms["sashForm"]["address3"].value;
-				document.forms["sashForm"]["paddress4"].value=document.forms["sashForm"]["address4"].value;
-				document.forms["sashForm"]["pcity"].value=document.forms["sashForm"]["city"].value;
-				document.forms["sashForm"]["ppin"].value=document.forms["sashForm"]["pin"].value;
-				document.forms["sashForm"]["pcountry"].value=document.forms["sashForm"]["country"].value;
-				document.forms["sashForm"]["pemail"].value=document.forms["sashForm"]["email"].value;
-				document.forms["sashForm"]["pstatecode"].value=document.forms["sashForm"]["statecode"].value;
-				document.forms["sashForm"]["pphno"].value=document.forms["sashForm"]["phno"].value;
-				document.forms["sashForm"]["pmobileno"].value=document.forms["sashForm"]["mobileno"].value;
+				document.forms["sashForm"]["permanent_communication_address_1"].value=document.forms["sashForm"]["communication_address_1"].value;
+				document.forms["sashForm"]["permanent_communication_address_2"].value=document.forms["sashForm"]["communication_address_2"].value;
+				document.forms["sashForm"]["permanent_communication_address_3"].value=document.forms["sashForm"]["communication_address_3"].value;
+				document.forms["sashForm"]["permanent_communication_address_4"].value=document.forms["sashForm"]["communication_address_4"].value;
+				document.forms["sashForm"]["permanent_city"].value=document.forms["sashForm"]["city"].value;
+				document.forms["sashForm"]["permanent_communication_address_pin"].value=document.forms["sashForm"]["communication_address_pin"].value;
+				document.forms["sashForm"]["permanent_communication_address_country"].value=document.forms["sashForm"]["communication_address_country"].value;
+				document.forms["sashForm"]["permanent_address_email"].value=document.forms["sashForm"]["communication_address_email"].value;
+				document.forms["sashForm"]["permanent_communication_address_state_code"].value=document.forms["sashForm"]["communication_address_state_code"].value;
+				document.forms["sashForm"]["permanent_communication_address_phone_number"].value=document.forms["sashForm"]["communication_address_phone_number"].value;
+				document.forms["sashForm"]["permanent_address_mobileno"].value=document.forms["sashForm"]["communication_address_mobileno"].value;
 			}
 			else
 			{
-				document.forms["sashForm"]["paddress1"].value="";
-				document.forms["sashForm"]["paddress2"].value="";
-				document.forms["sashForm"]["paddress3"].value="";
-				document.forms["sashForm"]["paddress4"].value="";
-				document.forms["sashForm"]["pcity"].value="";
-				document.forms["sashForm"]["ppin"].value=""
-				document.forms["sashForm"]["pcountry"].value="";
-				document.forms["sashForm"]["pemail"].value="";
-				document.forms["sashForm"]["pstatecode"].value="";
-				document.forms["sashForm"]["pphno"].value="";
-				document.forms["sashForm"]["pmobileno"].value="";
+				document.forms["sashForm"]["permanent_communication_address_1"].value="";
+				document.forms["sashForm"]["permanent_communication_address_2"].value="";
+				document.forms["sashForm"]["permanent_communication_address_3"].value="";
+				document.forms["sashForm"]["permanent_communication_address_4"].value="";
+				document.forms["sashForm"]["permanent_city"].value="";
+				document.forms["sashForm"]["permanent_communication_address_pin"].value=""
+				document.forms["sashForm"]["permanent_communication_address_country"].value="";
+				document.forms["sashForm"]["permanent_address_email"].value="";
+				document.forms["sashForm"]["permanent_communication_address_state_code"].value="";
+				document.forms["sashForm"]["permanent_communication_address_phone_number"].value="";
+				document.forms["sashForm"]["permanent_address_mobileno"].value="";
 			}
 		}
 	</script>
