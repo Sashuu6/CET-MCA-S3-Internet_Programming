@@ -1,0 +1,213 @@
+<!-- 
+	 	 ________  ________  ________  ___  ___  ___  ___  ___  ___  ________     
+		|\   ____\|\   __  \|\   ____\|\  \|\  \|\  \|\  \|\  \|\  \|\   ____\    
+		\ \  \___|\ \  \|\  \ \  \___|\ \  \\\  \ \  \\\  \ \  \\\  \ \  \___|    
+		 \ \_____  \ \   __  \ \_____  \ \   __  \ \  \\\  \ \  \\\  \ \  \____   
+		  \|____|\  \ \  \ \  \|____|\  \ \  \ \  \ \  \\\  \ \  \\\  \ \  ___  \ 
+		    ____\_\  \ \__\ \__\____\_\  \ \__\ \__\ \_______\ \_______\ \_______\
+		   |\_________\|__|\|__|\_________\|__|\|__|\|_______|\|_______|\|_______|
+		   \|_________|        \|_________|                                              
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>P5: Quiz</title>
+		<style>
+			* {
+			    box-sizing: border-box;
+			    font-family: sans-serif;
+			}
+			input[type=text], input[type=email], select, textarea {
+			    width: 100%;
+			    padding: 12px;
+			    border: 1px solid #ccc;
+			    border-radius: 4px;
+			    resize: vertical;
+			}
+			button {
+			    background-color: #4CAF50;
+			    color: white;
+			    padding: 12px 20px;
+			    border: none;
+			    border-radius: 4px;
+			    cursor: pointer;
+			    float: right;
+			}
+			.container {
+			    border-radius: 5px;
+			    background-color: #f2f2f2;
+			    padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>Quiz</h1>
+			<div class="container">
+				<form name="sashForm_1" onsubmit="return name_credentials()">
+					<table>
+						<tr>
+							<td>Name:</td>
+							<td><input type="text" name="con_name" required></td>
+						</tr>
+						<tr>
+							<td>E-Mail</td>
+							<td><input type="email" name="con_email" required></td>
+						</tr>
+						<tr>
+							<td colspan="2"><button>Submit</button></td>
+						</tr>
+					</table>
+				</form>	
+			</div>
+			<br>
+			<dir class="container">
+				<form name="sashForm_2">
+					<table>
+						<tr>
+							<td>Name: </td>
+							<td><input type="text" name="sel_name"></td>
+						</tr>
+						<tr>
+							<td>E-Mail: </td>
+							<td><input type="text" name="sel_email"></td>
+						</tr>
+					</table>
+				</form>
+			</dir>
+			<br>
+			<div class="container">
+				<form name="sashForm_3" onsubmit="return score()">
+					<table>
+						<tr>
+							<td>1. Which Penguin is the mascot of Linux Operating system?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q1" value="MUX" > MUX
+								<input type="radio" name="q1" value="TUX"> TUX 
+							</td>
+						</tr>
+						<tr>
+							<td>2. Ipad is manufactured by?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q2" value="Apple" > Apple
+								<input type="radio" name="q2" value="Samsung"> Samsung 
+							</td>
+						</tr>
+						<tr>
+							<td>3. Which IT company got name from Sanfrancisco?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q3" value="CISCO" > CISCO
+								<input type="radio" name="q3" value="UST Globals"> UST Globals
+							</td>
+						</tr>
+						<tr>
+							<td>4. "Connecting people" is the tagline of ....?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q4" value="Apple" > Apple
+								<input type="radio" name="q4" value="Nokia"> Nokia 
+							</td>
+						</tr>
+						<tr>
+							<td>5. What is IMEI?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q5" value="Internal Mobili Equli Id" > Internal Mobili Equli Id
+								<input type="radio" name="q5" value="International Mobile Equipment Identity"> International Mobile Equipment Identity 
+							</td>
+						</tr>
+						<tr>
+							<td>6. What is the expansion of ASCII?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q6" value="American Standard Code for Information Interchange" > American Standard Code for Information Interchange.
+								<input type="radio" name="q6" value="Austrian Standard for Communication and Information Interchange"> Austrian Standard for Communication and Information Interchange. 
+							</td>
+						</tr>
+						<tr>
+							<td>7. What is NIC?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q7" value="Network Interchange Card" > Network Interchange Card
+								<input type="radio" name="q7" value="Network Interface Card"> Network Interface Card
+							</td>
+						</tr>
+						<tr>
+							<td>8. Whose motto is "wisdom of mass principle"?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q8" value="Wikipedia" > Wikipedia
+								<input type="radio" name="q8" value="Google"> Google
+							</td>
+						</tr>
+						<tr>
+							<td>9. Which Indian state implemented 'Cyber Grameen'?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q9" value="Karnataka" > Karnataka
+								<input type="radio" name="q9" value="Andhra Pradesh"> Andhra Pradesh
+							</td>
+						</tr>
+						<tr>
+							<td>10. Tic-Tac-Toe is.....?</td>
+						</tr>
+						<tr>	
+							<td>
+								<input type="radio" name="q10" value="1st algorithm" > 1st algorithm
+								<input type="radio" name="q10" value="1st graphical game"> 1st graphical game
+							</td>
+						</tr>
+						<tr>	
+							<td colspan="2">
+								<td colspan="2"><button>Submit</button></td>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</center>
+	</body>
+	<script type="text/javascript">
+		function name_credentials() {
+			document.forms["sashForm_2"]["sel_name"].value=document.forms["sashForm_1"]["con_name"].value;
+			document.forms["sashForm_2"]["sel_email"].value=document.forms["sashForm_1"]["con_email"].value;
+			return false;
+		}
+		function score() {
+			var sc = 0;
+			var answers = ["TUX", "Apple", "CISCO", "Nokia", "International Mobile Equipment Identity", "American Standard Code for Information Interchange", "Network Interface Card", "Wikipedia", "Andhra Pradesh", "1st graphical game"];
+			var i;
+			var questions = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ",];
+			questions[0] = document.forms["sashForm_3"]["q1"].value;
+			questions[1] = document.forms["sashForm_3"]["q2"].value;
+			questions[2] = document.forms["sashForm_3"]["q3"].value;
+			questions[3] = document.forms["sashForm_3"]["q4"].value;
+			questions[4] = document.forms["sashForm_3"]["q5"].value;
+			questions[5] = document.forms["sashForm_3"]["q6"].value;
+			questions[6] = document.forms["sashForm_3"]["q7"].value;
+			questions[7] = document.forms["sashForm_3"]["q8"].value;
+			questions[8] = document.forms["sashForm_3"]["q9"].value;
+			questions[9] = document.forms["sashForm_3"]["q10"].value;
+
+			for(i = 0; i < answers.length; i++) {
+				if(questions[i] == answers[i]) {
+					sc = sc + 10;
+				}
+			}
+			alert(sc);
+			return false;
+		}
+	</script>
+</html>
