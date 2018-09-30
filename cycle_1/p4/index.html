@@ -119,11 +119,11 @@
 							</tr>
 							<tr id="td">
 								<td id="td">Midle Name</td>
-								<td><input type="text" name="middle_name"  required/></td>
+								<td><input type="text" name="middle_name" placeholder=" Middle Name" /></td>
 							</tr>
 							<tr id="td">
 								<td id="td">Last Name</td>
-								<td><input type="text" name="last_name"  required/></td>
+								<td><input type="text" name="last_name" placeholder=" Last Name" required/></td>
 							</tr>
 							<tr id="td">
 								<td id="td">2.gender</td><td><input type="radio" name="gender" required/>Male<input type="radio" name="gender" required/>Female</td>
@@ -134,37 +134,37 @@
 							</tr>	
 							<tr id="td">
 								<td id="td">4.(a)Mothers Name</td>
-								<td><input type="text" name="mother_name" required/></td>
+								<td><input type="text" name="mother_name" placeholder=" Mother's Name" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">4.(b)Fathers Name</td>
-								<td><input type="text" name="father_name" required/></td>
+								<td><input type="text" name="father_name" placeholder=" Father's Name" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td" colspan="2">5.(a)Address for communication</td>
 							</tr>
 							<tr id="td">
 								<td id="td">Address Line 1</td>
-								<td><input type="text" name="communication_address_1" required/></td>
+								<td><input type="text" name="communication_address_1" placeholder=" Address 1" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 2</td>
-								<td><input type="text" name="communication_address_2" required/></td>
+								<td><input type="text" name="communication_address_2" placeholder=" Address 2" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 3</td>
-								<td><input type="text" name="communication_address_3"/></td>
+								<td><input type="text" name="communication_address_3" placeholder=" Address 3"/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 4</td>
-								<td><input type="text" name="communication_address_4"/></td>
+								<td><input type="text" name="communication_address_4" placeholder=" Address 4"/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td" >City</td>
-								<td><input type="text" name="city" required/>State code <input type="text" name="communication_address_state_code" required/></td></tr>	
+								<td><input type="text" name="city" placeholder=" City" required/>State code <input type="text" name="communication_address_state_code" placeholder=" State code" required/></td></tr>	
 							<tr id="td">
 								<td id="td">PIN</td>
-								<td><input type="text" name="communication_address_pin" required/>Phone No with std code <input type="text" name="communication_address_phone_number" required/></td>
+								<td><input type="text" name="communication_address_pin" placeholder=" PIN" required/>Phone No with std code <input type="text" name="communication_address_phone_number" placeholder=" Ph no" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Country</td>
@@ -178,34 +178,34 @@
 							</tr>	
 							<tr id="td">
 								<td id="td">Email ID</td>
-								<td><input type="text" name="communication_address_email" required/>Mobile No <input type="text" name="communication_address_mobileno" required/></td>
+								<td><input type="email" name="communication_address_email" placeholder=" E-Mail" required/>Mobile No <input type="text" name="communication_address_mobileno" placeholder=" Mobile No" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td" colspan="2">5(b)Permenant Address same as communication address 5(a)above<input type="radio" name="same" onchange="address_copy(this.value)" value="yes"/>Yes<input value="no" onchange="address_copy(this.value)" type="radio" name="same" />No</td>
 							</tr>
 							<tr id="td">
 								<td id="td">Address Line 1</td>
-								<td><input type="text" name="permanent_communication_address_1" required/></td>
+								<td><input type="text" name="permanent_communication_address_1" placeholder=" Address 1" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 2</td>
-								<td><input type="text" name="permanent_communication_address_2" required/></td>
+								<td><input type="text" name="permanent_communication_address_2" placeholder=" Address 2" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 3</td>
-								<td><input type="text" name="permanent_communication_address_3" /></td>
+								<td><input type="text" name="permanent_communication_address_3" placeholder=" Address 3" /></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Address Line 4</td>
-								<td><input type="text" name="permanent_communication_address_4"/></td>
+								<td><input type="text" name="permanent_communication_address_4" placeholder=" Address 4" /></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">City</td>
-								<td><input type="text" name="permanent_city" required/> State code <input type="text" name="permanent_communication_address_state_code" required/></td>
+								<td><input type="text" name="permanent_city" placeholder=" City" required/> State code <input type="text" name="permanent_communication_address_state_code" placeholder=" State code" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">PIN</td>
-								<td><input type="text" name="permanent_communication_address_pin" required/>Phone No with std code <input type="text" name="permanent_communication_address_phone_number" required/></td>
+								<td><input type="text" name="permanent_communication_address_pin" placeholder=" PIN" required/>Phone No with std code <input type="text" name="permanent_communication_address_phone_number" placeholder=" Ph No" required/></td>
 							</tr>	
 							<tr id="td">
 								<td id="td">Country</td>
@@ -219,10 +219,10 @@
 							</tr>	
 							<tr id="td">
 								<td id="td">Email id</td>
-								<td><input type="text" name="permanent_address_email" required/>Mobile No <input type="text" name="permanent_address_mobileno" required/></td>
+								<td><input type="text" name="permanent_address_email" placeholder=" E-Mail" required/>Mobile No <input type="email" name="permanent_address_mobileno" placeholder=" Ph no" required/></td>
 							</tr>
 							<tr id="td">
-								<td id="td" colspan="2"><input type="submit"/></td>
+								<td id="td" colspan="2"><button type="button" onclick="checker()">Submit</button></td>
 							</tr>	
 						</table>
 					</form>
@@ -261,6 +261,39 @@
 				document.forms["sashForm"]["permanent_communication_address_state_code"].value="";
 				document.forms["sashForm"]["permanent_communication_address_phone_number"].value="";
 				document.forms["sashForm"]["permanent_address_mobileno"].value="";
+			}
+		}
+
+		function checker()
+		{
+			communication_pin = document.forms["sashForm"]["communication_address_pin"].value;
+			permanent_pin = document.forms["sashForm"]["permanent_communication_address_pin"].value;
+			communication_phno = document.forms["sashForm"]["permanent_communication_address_phone_number"].value;
+			permanent_phno = document.forms["sashForm"]["communication_address_mobileno"].value;
+
+			if(isNaN(communication_pin))
+			{
+				alert("Communication PIN not a number.");
+			}
+			if(isNaN(permanent_pin))
+			{
+				alert("Permenant PIN not a number.");
+			}
+			if(isNaN(communication_phno))
+			{
+				alert("Communication phno should be a number.");
+			}
+			if(isNaN(permanent_phno))
+			{
+				alert("permanent phno should be a number.");
+			}
+			if(communication_phno.length!=10)
+			{
+				alert("Incorrect communication phone number");
+			}
+			if(permanent_phno.length!=10)
+			{
+				alert("Incorrect permanent phone number");
 			}
 		}
 	</script>
