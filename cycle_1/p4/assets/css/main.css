@@ -1,0 +1,37 @@
+
+			#body{
+				margin: -10px;
+	    		margin-left: -10px;
+				width: 82%;
+				margin-left: 9%;
+				box-shadow: 1px -1px 11px -1px black;
+			}
+			#nav1{
+				background: #ced6f0;
+				height:50px;
+			}
+			#nav2{
+				height:50px;
+			}
+			#logo{
+				width: 60px;
+			}
+			td.logo{
+				width: 55%;
+			}
+			#td{
+				background: #b3cef5;
+			}
+			h4.title{
+				float: left;
+				margin-top: 13;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 22px;
+				color: #793abd;
+			}
+			#logo{
+				float:left;
+			}
+			.nav-menu{
+	    		margin-left: -27px;
+			}
