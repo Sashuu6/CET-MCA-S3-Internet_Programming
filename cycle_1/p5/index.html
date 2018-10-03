@@ -177,6 +177,9 @@
 					</table>
 				</form>
 			</div>
+			<div class="container" id="result_div">
+				
+			</div>
 		</center>
 	</body>
 	<script type="text/javascript">
@@ -186,6 +189,8 @@
 			return false;
 		}
 		function score() {
+			var namee = document.forms["sashForm_2"]["sel_name"].value;
+			var emaill = document.forms["sashForm_2"]["sel_email"].value;
 			var sc = 0;
 			var answers = ["TUX", "Apple", "CISCO", "Nokia", "International Mobile Equipment Identity", "American Standard Code for Information Interchange", "Network Interface Card", "Wikipedia", "Andhra Pradesh", "1st graphical game"];
 			var i;
@@ -205,8 +210,13 @@
 				if(questions[i] == answers[i]) {
 					sc = sc + 10;
 				}
+				if(questions[i] != answers[i]) {
+
+				}
 			}
-			alert(sc);
+			var no_of_correct_ans = sc/10;
+			var no_of_wrong_ans = 10 - no_of_correct_ans;
+			document.getElementById("result_div").innerHTML = "name: "+namee+"<br>"+"Email: "+emaill+"<br>"+"Number of correct answers:"+no_of_correct_ans+"<br>"+"Number of wrong answers: "+no_of_wrong_ans;
 			return false;
 		}
 	</script>
