@@ -210,13 +210,10 @@
 				if(questions[i] == answers[i]) {
 					sc = sc + 10;
 				}
-				if(questions[i] != answers[i]) {
-
-				}
 			}
 			var no_of_correct_ans = sc/10;
 			var no_of_wrong_ans = 10 - no_of_correct_ans;
-			document.getElementById("result_div").innerHTML = "name: "+namee+"<br>"+"Email: "+emaill+"<br>"+"Number of correct answers:"+no_of_correct_ans+"<br>"+"Number of wrong answers: "+no_of_wrong_ans;
+			document.getElementById("result_div").innerHTML = "name: "+namee+"<br>"+"Email: "+emaill+"<br>"+"Number of correct answers:"+no_of_correct_ans+"<br>"+"Number of wrong answers: "+no_of_wrong_ans+"<br>"+"Score: "+sc;
 			return false;
 		}
 	</script>
