@@ -178,8 +178,9 @@
 				</form>
 			</div>
 			<div class="container" id="result_div">
-				
 			</div>
+			<dir class="container" id="correct_ans">
+			</dir>
 		</center>
 	</body>
 	<script type="text/javascript">
@@ -195,6 +196,9 @@
 			var answers = ["TUX", "Apple", "CISCO", "Nokia", "International Mobile Equipment Identity", "American Standard Code for Information Interchange", "Network Interface Card", "Wikipedia", "Andhra Pradesh", "1st graphical game"];
 			var i;
 			var questions = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ",];
+			var k = 0;
+			var wrong_answers = " ";
+
 			questions[0] = document.forms["sashForm_3"]["q1"].value;
 			questions[1] = document.forms["sashForm_3"]["q2"].value;
 			questions[2] = document.forms["sashForm_3"]["q3"].value;
@@ -210,10 +214,14 @@
 				if(questions[i] == answers[i]) {
 					sc = sc + 10;
 				}
+				else if(questions[i] != answers[i]) {
+					wrong_answers = wrong_answers + (i+1) + ". "+ answers[i] + " ";
+				}
 			}
 			var no_of_correct_ans = sc/10;
 			var no_of_wrong_ans = 10 - no_of_correct_ans;
 			document.getElementById("result_div").innerHTML = "name: "+namee+"<br>"+"Email: "+emaill+"<br>"+"Number of correct answers:"+no_of_correct_ans+"<br>"+"Number of wrong answers: "+no_of_wrong_ans+"<br>"+"Score: "+sc;
+			document.getElementById("correct_ans").innerHTML = "<h2> Answers </h2> <br>" +wrong_answers;
 			return false;
 		}
 	</script>
