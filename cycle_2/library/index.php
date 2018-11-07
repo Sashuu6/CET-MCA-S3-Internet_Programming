@@ -23,13 +23,17 @@
          <div class="w3-display-middle">
             <h1 class="w3-jumbo w3-animate-top w3-center">Login</h1>
             <hr class="w3-border-grey" style="margin:auto;width:40%">
-            <form method="POST">
+            <form action = "" method="POST">
                <p class="w3-large w3-center"><input class="w3-input w3-border" type="text" placeholder="Username" required name="username"></p>
                <p class="w3-large w3-center"><input class="w3-input w3-border" type="password" placeholder="Password" required name="password"></p>
-               <p class="w3-large w3-center"><button class="w3-button w3-green" type="submit"> Submit </button></p>
+               <p class="w3-large w3-center"><button class="w3-button w3-green" type="submit" name="login_button"> Submit </button></p>
                <p class="w3-large w3-center">
                   <a class="" href="forgot_password.php">
                      Forgot password
+               </p>
+               <p class="w3-large w3-center">
+                  <a class="" href="register.php">
+                     Not registered yet?
                </p>
             </form>
          </div>
@@ -39,3 +43,33 @@
       </div>
    </body>
 </html>
+<?php
+    include ("config.php");
+    if(isset($_POST['login_button']))
+    {
+      $un=$_POST['username'];
+      $pn=$_POST['password'];
+      $res=mysqli_query($conn,"select * from users where username = '$un' and password = '$pn'");
+      $type="";
+      $res1=mysqli_fetch_array($res);
+      $type=$res1[3];
+       if($type=="admin")
+       {
+            header("location:admin/dashboard.php");
+       $_SESSION['username'] = $un;
+        }
+        else if($type=="student")
+        {  
+            header("location:student/dashboard.php");
+       $_SESSION['username'] = $un;
+        }  
+        else
+        {
+            ?>
+                <script>
+                    alert("Invalid username or password");
+                </script>
+            <?php
+        }
+    }
+?>
