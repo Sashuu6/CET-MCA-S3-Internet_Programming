@@ -1,75 +1,103 @@
 <!DOCTYPE html>
 <html>
-   <title>LMS | Login</title>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-   <style>
-      body,h1 {font-family: "Raleway", sans-serif}
-      body, html {height: 100%}
-      .bgimg {
-      background-image: url('assets/images/back-image.jpg');
-      min-height: 100%;
-      background-position: center;
-      background-size: cover;
-      }
-   </style>
-   <body>
-      <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-         <div class="w3-display-topleft w3-padding-large w3-xlarge">
-            Library Management System
-         </div>
-         <div class="w3-display-middle">
-            <h1 class="w3-jumbo w3-animate-top w3-center">Login</h1>
-            <hr class="w3-border-grey" style="margin:auto;width:40%">
-            <form action = "" method="POST">
-               <p class="w3-large w3-center"><input class="w3-input w3-border" type="text" placeholder="Username" required name="username"></p>
-               <p class="w3-large w3-center"><input class="w3-input w3-border" type="password" placeholder="Password" required name="password"></p>
-               <p class="w3-large w3-center"><button class="w3-button w3-green" type="submit" name="login_button"> Submit </button></p>
-               <p class="w3-large w3-center">
-                  <a class="" href="forgot_password.php">
-                     Forgot password
-               </p>
-               <p class="w3-large w3-center">
-                  <a class="" href="register.php">
-                     Not registered yet?
-               </p>
-            </form>
-         </div>
-         <div class="w3-display-bottomleft w3-padding-large">
-         Developed by <a href="https://sashuu6.github.io/" target="_blank">Sashwat K</a>
-         </div>
-      </div>
-   </body>
-</html>
-<?php
-    include ("config.php");
-    if(isset($_POST['login_button']))
-    {
-      $un=$_POST['username'];
-      $pn=$_POST['password'];
-      $res=mysqli_query($conn,"select * from users where username = '$un' and password = '$pn'");
-      $type="";
-      $res1=mysqli_fetch_array($res);
-      $type=$res1[3];
-       if($type=="admin")
-       {
-            header("location:admin/dashboard.php");
-       $_SESSION['username'] = $un;
-        }
-        else if($type=="student")
-        {  
-            header("location:student/dashboard.php");
-       $_SESSION['username'] = $un;
-        }  
-        else
-        {
-            ?>
-                <script>
-                    alert("Invalid username or password");
-                </script>
-            <?php
-        }
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;
+width: 35%;
+position: relative;
+left: 34%;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
     }
-?>
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+
+
+<form action="login.php" method="post">
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
+
