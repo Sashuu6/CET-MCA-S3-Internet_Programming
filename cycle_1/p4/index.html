@@ -7,14 +7,17 @@
 		    ____\_\  \ \__\ \__\____\_\  \ \__\ \__\ \_______\ \_______\ \_______\
 		   |\_________\|__|\|__|\_________\|__|\|__|\|_______|\|_______|\|_______|
 		   \|_________|        \|_________|                                              
+
+TODO : hello
 -->
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>P4: Student registration</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-		<style>
-			li.nav-menu{
+
+<head>
+    <meta charset="utf-8">
+    <title>P4: Student registration</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <style>
+        li.nav-menu{
 				float: left;
 				margin-left: 11px;
 				font-family: Arial, Helvetica, sans-serif;
@@ -28,252 +31,242 @@
 	    		border-top: 1px solid #999;
 	    	}
 		</style>
-	</head>
-	<body>
-		<table id="body" >
-			<tr id="nav2">
-				<td rowspan="2" class="logo">
-					<img src="assets/images/logo.png" id="logo"/>
-					<h4 class="title"> The institute of Technical education of India</h4>
-					</td>
-				<td>
-					Search <input type="text"/>
-				</td>
-			</tr>
-			<tr id="nav2" ><td class="nav2">
-				<ul class="nav-menu" type="none">
-					<li class="nav-menu">Home</li>	
-					<li class="nav-menu">e-Service</li>	
-					<li class="nav-menu">e-sahaya</li>	
-					<li class="nav-menu">feedback</li>	
-					<li class="nav-menu">contact us</li>	
-					<li class="nav-menu">Web mail</li>	
-				</ul>
-				</td>
-			</tr>
-			<tr id="nav1">
-				<td colspan="2">
-					<ul class="nav-menu1" type="none">
-						<li class="nav-menu1">Overview</li>	
-						<li class="nav-menu1">Department</li>	
-						<li class="nav-menu1">Members</li>	
-						<li class="nav-menu1">Students</li>	
-						<li class="nav-menu1">Industry</li>	
-						<li class="nav-menu1">Resources</li>	
-						<li class="nav-menu1">Showcases</li>	
-						<li class="nav-menu1">Others</li>	
-						<li class="nav-menu1">FAQs</li>		
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<form onsubmit="return f()" name="sashForm">
-						<table width="100%" class="form">
-							<caption>
-								<h3>Application Form for Registration to Common Proficiency Test Course</h3>
-							</caption>
-							<tr id="td">
-								<td colspan="2">1.Name in full</td>
-							</tr>
-							<tr id="td">
-								<td id="td">First Name</td>
-								<td><input type="text" name="first_name" placeholder=" First Name" /></td>
-							</tr>
-							<tr id="td">
-								<td id="td">Midle Name</td>
-								<td><input type="text" name="middle_name" placeholder=" Middle Name" /></td>
-							</tr>
-							<tr id="td">
-								<td id="td">Last Name</td>
-								<td><input type="text" name="last_name" placeholder=" Last Name" /></td>
-							</tr>
-							<tr id="td">
-								<td id="td">2.gender</td><td><input type="radio" name="gender" />Male<input type="radio" name="gender" />Female</td>
-							</tr>
-							<tr id="td">
-								<td id="td">3.Date of Birth</td>
-								<td ><input type="date" name="date_of_birth" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">4.(a)Mothers Name</td>
-								<td><input type="text" name="mother_name" placeholder=" Mother's Name" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">4.(b)Fathers Name</td>
-								<td><input type="text" name="father_name" placeholder=" Father's Name" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td" colspan="2">5.(a)Address for communication</td>
-							</tr>
-							<tr id="td">
-								<td id="td">Address Line 1</td>
-								<td><input type="text" name="communication_address_1" placeholder=" Address 1" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Address Line 2</td>
-								<td><input type="text" name="communication_address_2" placeholder=" Address 2" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Address Line 3</td>
-								<td><input type="text" name="communication_address_3" placeholder=" Address 3"/></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Address Line 4</td>
-								<td><input type="text" name="communication_address_4" placeholder=" Address 4"/></td>
-							</tr>	
-							<tr id="td">
-								<td id="td" >City</td>
-								<td><input type="text" name="city" placeholder=" City" />State code <input type="text" name="communication_address_state_code" placeholder=" State code" /></td></tr>	
-							<tr id="td">
-								<td id="td">PIN</td>
-								<td><input type="text" name="communication_address_pin" placeholder=" PIN" />Phone No with std code <input type="text" name="communication_address_phone_number" placeholder=" Ph no" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Country</td>
-								<td>
-									<select name="communication_address_country" >
-										<option><---Select country---></option>
-										<option>INDIA</option>
-										<option></option>
-									</select>
-								</td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Email ID</td>
-								<td><input type="email" name="communication_address_email" placeholder=" E-Mail" />Mobile No <input type="text" name="communication_address_mobileno" placeholder=" Mobile No" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td" colspan="2">5(b)Permenant Address same as communication address 5(a)above<input type="radio" name="same" onchange="address_copy(this.value)" value="yes"/>Yes<input value="no" onchange="address_copy(this.value)" type="radio" name="same" />No</td>
-							</tr>
-							<tr id="td">
-								<td id="td">Address Line 1</td>
-								<td><input type="text" name="permanent_communication_address_1" placeholder=" Address 1" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Address Line 2</td>
-								<td><input type="text" name="permanent_communication_address_2" placeholder=" Address 2" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Address Line 3</td>
-								<td><input type="text" name="permanent_communication_address_3" placeholder=" Address 3" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Address Line 4</td>
-								<td><input type="text" name="permanent_communication_address_4" placeholder=" Address 4" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">City</td>
-								<td><input type="text" name="permanent_city" placeholder=" City" /> State code <input type="text" name="permanent_communication_address_state_code" placeholder=" State code" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">PIN</td>
-								<td><input type="text" name="permanent_communication_address_pin" placeholder=" PIN" />Phone No with std code <input type="text" name="permanent_communication_address_phone_number" placeholder=" Ph No" /></td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Country</td>
-								<td>
-									<select name="permanent_communication_address_country" >
-										<option>---Select country---</option>
-										<option>INDIA</option>
-										<option></option>
-									</select>
-								</td>
-							</tr>	
-							<tr id="td">
-								<td id="td">Email id</td>
-								<td><input type="text" name="permanent_address_email" placeholder=" E-Mail" />Mobile No <input type="email" name="permanent_address_mobileno" placeholder=" Ph no" /></td>
-							</tr>
-							<tr id="td">
-								<td id="td" colspan="2"><button type="button" onclick="checker()">Submit</button></td>
-							</tr>	
-						</table>
-					</form>
-				</td>
-			</tr>
-		</table>	
-	</body>
-	<script>
+</head>
 
-		function address_copy(str)
-		{
-			if(document.forms["sashForm"]["same"].value=="yes")
-			{	
-				document.forms["sashForm"]["permanent_communication_address_1"].value=document.forms["sashForm"]["communication_address_1"].value;
-				document.forms["sashForm"]["permanent_communication_address_2"].value=document.forms["sashForm"]["communication_address_2"].value;
-				document.forms["sashForm"]["permanent_communication_address_3"].value=document.forms["sashForm"]["communication_address_3"].value;
-				document.forms["sashForm"]["permanent_communication_address_4"].value=document.forms["sashForm"]["communication_address_4"].value;
-				document.forms["sashForm"]["permanent_city"].value=document.forms["sashForm"]["city"].value;
-				document.forms["sashForm"]["permanent_communication_address_pin"].value=document.forms["sashForm"]["communication_address_pin"].value;
-				document.forms["sashForm"]["permanent_communication_address_country"].value=document.forms["sashForm"]["communication_address_country"].value;
-				document.forms["sashForm"]["permanent_address_email"].value=document.forms["sashForm"]["communication_address_email"].value;
-				document.forms["sashForm"]["permanent_communication_address_state_code"].value=document.forms["sashForm"]["communication_address_state_code"].value;
-				document.forms["sashForm"]["permanent_communication_address_phone_number"].value=document.forms["sashForm"]["communication_address_phone_number"].value;
-				document.forms["sashForm"]["permanent_address_mobileno"].value=document.forms["sashForm"]["communication_address_mobileno"].value;
-			}
-			else
-			{
-				document.forms["sashForm"]["permanent_communication_address_1"].value="";
-				document.forms["sashForm"]["permanent_communication_address_2"].value="";
-				document.forms["sashForm"]["permanent_communication_address_3"].value="";
-				document.forms["sashForm"]["permanent_communication_address_4"].value="";
-				document.forms["sashForm"]["permanent_city"].value="";
-				document.forms["sashForm"]["permanent_communication_address_pin"].value=""
-				document.forms["sashForm"]["permanent_communication_address_country"].value="";
-				document.forms["sashForm"]["permanent_address_email"].value="";
-				document.forms["sashForm"]["permanent_communication_address_state_code"].value="";
-				document.forms["sashForm"]["permanent_communication_address_phone_number"].value="";
-				document.forms["sashForm"]["permanent_address_mobileno"].value="";
-			}
-		}
+<body>
+    <table id="body">
+        <tr id="nav2">
+            <td rowspan="2" class="logo">
+                <img src="assets/images/logo.png" id="logo" />
+                <h4 class="title"> The institute of Technical education of India</h4>
+            </td>
+            <td>
+                Search <input type="text" />
+            </td>
+        </tr>
+        <tr id="nav2">
+            <td class="nav2">
+                <ul class="nav-menu" type="none">
+                    <li class="nav-menu">Home</li>
+                    <li class="nav-menu">e-Service</li>
+                    <li class="nav-menu">e-sahaya</li>
+                    <li class="nav-menu">feedback</li>
+                    <li class="nav-menu">contact us</li>
+                    <li class="nav-menu">Web mail</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="nav1">
+            <td colspan="2">
+                <ul class="nav-menu1" type="none">
+                    <li class="nav-menu1">Overview</li>
+                    <li class="nav-menu1">Department</li>
+                    <li class="nav-menu1">Members</li>
+                    <li class="nav-menu1">Students</li>
+                    <li class="nav-menu1">Industry</li>
+                    <li class="nav-menu1">Resources</li>
+                    <li class="nav-menu1">Showcases</li>
+                    <li class="nav-menu1">Others</li>
+                    <li class="nav-menu1">FAQs</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form onsubmit="return f()" name="sashForm">
+                    <table width="100%" class="form">
+                        <caption>
+                            <h3>Application Form for Registration to Common Proficiency Test Course</h3>
+                        </caption>
+                        <tr id="td">
+                            <td colspan="2">1.Name in full</td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">First Name</td>
+                            <td><input type="text" name="first_name" placeholder=" First Name" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Midle Name</td>
+                            <td><input type="text" name="middle_name" placeholder=" Middle Name" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Last Name</td>
+                            <td><input type="text" name="last_name" placeholder=" Last Name" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">2.gender</td>
+                            <td><input type="radio" name="gender" />Male<input type="radio" name="gender" />Female</td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">3.Date of Birth</td>
+                            <td><input type="date" name="date_of_birth" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">4.(a)Mothers Name</td>
+                            <td><input type="text" name="mother_name" placeholder=" Mother's Name" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">4.(b)Fathers Name</td>
+                            <td><input type="text" name="father_name" placeholder=" Father's Name" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td" colspan="2">5.(a)Address for communication</td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 1</td>
+                            <td><input type="text" name="communication_address_1" placeholder=" Address 1" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 2</td>
+                            <td><input type="text" name="communication_address_2" placeholder=" Address 2" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 3</td>
+                            <td><input type="text" name="communication_address_3" placeholder=" Address 3" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 4</td>
+                            <td><input type="text" name="communication_address_4" placeholder=" Address 4" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">City</td>
+                            <td><input type="text" name="city" placeholder=" City" />State code <input type="text" name="communication_address_state_code" placeholder=" State code" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">PIN</td>
+                            <td><input type="text" name="communication_address_pin" placeholder=" PIN" />Phone No with std code <input type="text" name="communication_address_phone_number" placeholder=" Ph no" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Country</td>
+                            <td>
+                                <select name="communication_address_country">
+                                    <option>
+                                        <---Select country--->
+                                    </option>
+                                    <option>INDIA</option>
+                                    <option></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Email ID</td>
+                            <td><input type="email" name="communication_address_email" placeholder=" E-Mail" />Mobile No <input type="text" name="communication_address_mobileno" placeholder=" Mobile No" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td" colspan="2">5(b)Permenant Address same as communication address 5(a)above<input type="radio" name="same" onchange="address_copy(this.value)" value="yes" />Yes<input value="no" onchange="address_copy(this.value)" type="radio" name="same" />No</td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 1</td>
+                            <td><input type="text" name="permanent_communication_address_1" placeholder=" Address 1" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 2</td>
+                            <td><input type="text" name="permanent_communication_address_2" placeholder=" Address 2" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 3</td>
+                            <td><input type="text" name="permanent_communication_address_3" placeholder=" Address 3" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Address Line 4</td>
+                            <td><input type="text" name="permanent_communication_address_4" placeholder=" Address 4" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">City</td>
+                            <td><input type="text" name="permanent_city" placeholder=" City" /> State code <input type="text" name="permanent_communication_address_state_code" placeholder=" State code" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">PIN</td>
+                            <td><input type="text" name="permanent_communication_address_pin" placeholder=" PIN" />Phone No with std code <input type="text" name="permanent_communication_address_phone_number" placeholder=" Ph No" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Country</td>
+                            <td>
+                                <select name="permanent_communication_address_country">
+                                    <option>---Select country---</option>
+                                    <option>INDIA</option>
+                                    <option></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td">Email id</td>
+                            <td><input type="text" name="permanent_address_email" placeholder=" E-Mail" />Mobile No <input type="email" name="permanent_address_mobileno" placeholder=" Ph no" /></td>
+                        </tr>
+                        <tr id="td">
+                            <td id="td" colspan="2"><button type="button" onclick="checker()">Submit</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function address_copy(str) {
+        if (document.forms["sashForm"]["same"].value == "yes") {
+            document.forms["sashForm"]["permanent_communication_address_1"].value = document.forms["sashForm"]["communication_address_1"].value;
+            document.forms["sashForm"]["permanent_communication_address_2"].value = document.forms["sashForm"]["communication_address_2"].value;
+            document.forms["sashForm"]["permanent_communication_address_3"].value = document.forms["sashForm"]["communication_address_3"].value;
+            document.forms["sashForm"]["permanent_communication_address_4"].value = document.forms["sashForm"]["communication_address_4"].value;
+            document.forms["sashForm"]["permanent_city"].value = document.forms["sashForm"]["city"].value;
+            document.forms["sashForm"]["permanent_communication_address_pin"].value = document.forms["sashForm"]["communication_address_pin"].value;
+            document.forms["sashForm"]["permanent_communication_address_country"].value = document.forms["sashForm"]["communication_address_country"].value;
+            document.forms["sashForm"]["permanent_address_email"].value = document.forms["sashForm"]["communication_address_email"].value;
+            document.forms["sashForm"]["permanent_communication_address_state_code"].value = document.forms["sashForm"]["communication_address_state_code"].value;
+            document.forms["sashForm"]["permanent_communication_address_phone_number"].value = document.forms["sashForm"]["communication_address_phone_number"].value;
+            document.forms["sashForm"]["permanent_address_mobileno"].value = document.forms["sashForm"]["communication_address_mobileno"].value;
+        } else {
+            document.forms["sashForm"]["permanent_communication_address_1"].value = "";
+            document.forms["sashForm"]["permanent_communication_address_2"].value = "";
+            document.forms["sashForm"]["permanent_communication_address_3"].value = "";
+            document.forms["sashForm"]["permanent_communication_address_4"].value = "";
+            document.forms["sashForm"]["permanent_city"].value = "";
+            document.forms["sashForm"]["permanent_communication_address_pin"].value = ""
+            document.forms["sashForm"]["permanent_communication_address_country"].value = "";
+            document.forms["sashForm"]["permanent_address_email"].value = "";
+            document.forms["sashForm"]["permanent_communication_address_state_code"].value = "";
+            document.forms["sashForm"]["permanent_communication_address_phone_number"].value = "";
+            document.forms["sashForm"]["permanent_address_mobileno"].value = "";
+        }
+    }
 
-		function checker()
-		{
-			communication_pin = document.forms["sashForm"]["communication_address_pin"].value;
-			permanent_pin = document.forms["sashForm"]["permanent_communication_address_pin"].value;
-			communication_phno = document.forms["sashForm"]["permanent_communication_address_phone_number"].value;
-			permanent_phno = document.forms["sashForm"]["communication_address_mobileno"].value;
+    function checker() {
+        communication_pin = document.forms["sashForm"]["communication_address_pin"].value;
+        permanent_pin = document.forms["sashForm"]["permanent_communication_address_pin"].value;
+        communication_phno = document.forms["sashForm"]["permanent_communication_address_phone_number"].value;
+        permanent_phno = document.forms["sashForm"]["communication_address_mobileno"].value;
 
-			if(isNaN(communication_pin))
-			{
-				alert("Communication PIN not a number.");
-			}
-			if(isNaN(permanent_pin))
-			{
-				alert("Permenant PIN not a number.");
-			}
-			if(isNaN(communication_phno))
-			{
-				alert("Communication phno should be a number.");
-			}
-			if(isNaN(permanent_phno))
-			{
-				alert("permanent phno should be a number.");
-			}
-			if(communication_phno.length!=10)
-			{
-				alert("Incorrect communication phone number");
-			}
-			if(permanent_phno.length!=10)
-			{
-				alert("Incorrect permanent phone number");
-			}
-			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(sashForm.permanent_address_email.value))
-  			{
-    			return (true)
-  			}
-  			else
-  			{
-  				alert("Incorrect email");
-  			}
-  			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(sashForm.communication_address_email.value))
-  			{
-    			return (true)
-  			}
-  			else
-  			{
-  				alert("Incorrect email");
-  			}
-		}
-	</script>
+        if (isNaN(communication_pin)) {
+            alert("Communication PIN not a number.");
+        }
+        if (isNaN(permanent_pin)) {
+            alert("Permenant PIN not a number.");
+        }
+        if (isNaN(communication_phno)) {
+            alert("Communication phno should be a number.");
+        }
+        if (isNaN(permanent_phno)) {
+            alert("permanent phno should be a number.");
+        }
+        if (communication_phno.length != 10) {
+            alert("Incorrect communication phone number");
+        }
+        if (permanent_phno.length != 10) {
+            alert("Incorrect permanent phone number");
+        }
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(sashForm.permanent_address_email.value)) {
+            return (true)
+        } else {
+            alert("Incorrect email");
+        }
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(sashForm.communication_address_email.value)) {
+            return (true)
+        } else {
+            alert("Incorrect email");
+        }
+    }
+
+</script>
+
 </html>

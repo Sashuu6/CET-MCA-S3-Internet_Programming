@@ -1,0 +1,98 @@
+html, body
+{
+    height: 100%;
+}
+
+.sidenav .nav li{
+	width: 200px;
+	font-size: 15px;
+	text-align: left;
+	padding-left: 10px;
+	color: #585d5d;
+	font-weight: bold;
+	height: 50px;
+	padding: 14px;
+	transition: 0.4s;
+}
+
+.sidenav .nav .active{
+	background-color: #333;
+	color: #ffff;
+	font-weight: bold;
+
+}
+
+.sidenav .nav li:hover{
+	background-color: #7c7e82;
+	color: #fff;
+}
+
+.sidenav .nav a:hover{
+	text-decoration: none;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: calc(86vh);}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+    .modal-dialog{
+      width: 20%;
+      float: right;
+      margin-left: 1%;
+    }
+
+
+      .search-table{
+    width: 100%;
+    
+}
+.search-box{
+    background: #333;
+    color: #ffff;
+    border: 1px solid #ababab;
+    padding: 3%;
+}
+.search-box input:focus{
+    box-shadow:none;
+    border:2px solid #eeeeee;
+}
+.search-list{
+    background: #fff;
+    border: 1px solid #ababab;
+    border-top: none;
+    height: 60vh;
+    overflow-y: scroll;
+}
+.search-list h3{
+    background: #eee;
+    padding: 3%;
+    margin-bottom: 0%;
+}
