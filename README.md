@@ -11,5 +11,5 @@ This repository contains all the lab cycles, I did during my third semester.
 
 # Cycle-2
 
-1. Hospital 
-2. Library
+1. Hospital (PHP)
+2. Library (PHP)
